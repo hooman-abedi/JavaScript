@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basics2</title>
+    <script>
+        let pattern1 = new RegExp(/pop/);
+        let word1 = "the called their dad, pop"
+        let result1 = pattern1.test(word1)
+        console.log(result1)
+
+        let phonepattern = new RegExp(/^\+\d+\(\d{3}\)\d{3}-\d{4}/)
+        let phnumber = "\+1\(437\)838\-1376"
+        let result2 = phonepattern.test(phnumber);
+        console.log(result2)
+
+        let mailpattern = new RegExp(/^[a-zA-Z0-9+.%\-_]+@[a-zA-Z]+\.(com)$/)
+        let mailpattern2 = new RegExp(/^[\w+.]+@[a-zA-Z]+\.(com)$/)
+        let email = "hoomana.abedi@yahoo.com"
+        let result3 = mailpattern.test(email)
+        let result33 = mailpattern2.test(email)
+        console.log(result3)
+        console.log(result33)
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

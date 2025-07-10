@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Script Basics</title>
+    <script>
+        // a program which gets the Numerics
+        // input for the number of iterations and utilizes of iterations (loop) and utilizes a while loop
+        // ensure that the loop  stop when iteration count reaches 3.
+        let a;
+        let i = 0;
+        let stop_num = parseInt(prompt("enter a number"));
+        while (i <= stop_num){
+            a = i++
+            console.log(a)
+            if (a === 3){
+                break;
+            }
+        }
+        //Write a JavaScript script that accepts a numerical input for the number of iterations and utilizes a while loop.
+        // Ensure that the loop skip(continue) at iteration
+        // number gets to 1 and
+        // stops when the iteration count reaches 3.
+        let aa;
+        let ii = 1;
+        let stop_numm = parseInt(prompt("enter a number"));
+        while (ii <= stop_numm){
+            aa = ii++
+            if (aa === 1){
+                continue;
+            }
+            else if (aa === 3){
+                break;
+            }
+            console.log(aa)
+        }
+        // Write a JavaScript script to create an Animal object,
+        // declare constant variable for tail_length.
+        //new --> keyword is used to create an object
+        // syntax --. const nameOfObject = newObject()
+        // Declare the properties for one
+        // of the animals.
+
+        // and display the few properties.
+        let Animall = {}
+        Animall.tail_length = 2;
+        console.log(Animall.tail_length)
+        const Mouse = {
+            name : "teemo",
+            relatives : ["Tristina", "Jinx"],
+            food:[
+                {breakfast_monday: "cheese"},
+                {lunch_monday: "meat"},
+                {breakfast_tuesday: "Milk"},
+                {lunch_tuesday: "meat"}
+            ]
+        }
+        console.log(Mouse.name)
+        console.log("this animal eats "+Mouse.food[0].breakfast_monday+" on mondays.")
+        class Animal{
+
+            constructor(firstname, cousins, food) {
+                this.firstname = firstname
+                this.cousins = cousins
+                this.food = food
+
+            }
+            getLunch(day){
+                return this.food[day]?.lunch || "not found the date!"
+            }
+            getBreakfast(day){
+                return this.food[day]?.breakfast || "not found the date!"
+            }
+
+        }
+        const Trex = new Animal(
+            "T-rex",
+            ["Hooman", "Tara"],
+            {
+            monday : { breakfast : "Milk", lunch : "meat"},
+            tuesday: { breakfast : "Cheese", lunch : "burgers"}
+            }
+        )
+        console.log(Trex.firstname);
+        console.log(Trex.cousins[0]);
+        console.log(Trex.getBreakfast("monday"))
+        console.log(Trex.getLunch("tuesday"))
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
